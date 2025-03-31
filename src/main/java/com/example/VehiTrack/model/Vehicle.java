@@ -23,10 +23,13 @@ public class Vehicle {
     @Column(nullable = false)
     private String marca;
 
+    @Column(nullable = false)
     private String modelo;
 
+    @Column(nullable = false)
     private String chassi;
 
+    @Column(nullable = false)
     private boolean licenciado;
 
 }
