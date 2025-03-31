@@ -2,6 +2,7 @@ package com.example.VehiTrack;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.context.event.ApplicationReadyEvent;
 import org.springframework.context.event.EventListener;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -23,8 +24,8 @@ public class VehiTrackApplication {
 
 	}
 
-	@EventListener(ApplicationReadyEveny.public class VehiTrackApplication {
-		
-	})
-
+	@EventListener(ApplicationReadyEvent.class)
+	public void onApplicationReadyEvent(){
+		System.out.println("Server started. Running at: http://localhost:8080/home/test");
+	}
 }
