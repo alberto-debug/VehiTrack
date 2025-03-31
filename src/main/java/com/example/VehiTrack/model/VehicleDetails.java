@@ -3,6 +3,8 @@ package com.example.VehiTrack.model;
 import lombok.Getter;
 import lombok.Setter;
 
+@Setter
+@Setter
 public class VehicleDetails {
 
     private String marca;

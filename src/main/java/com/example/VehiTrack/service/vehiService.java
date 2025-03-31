@@ -11,25 +11,22 @@ import org.springframework.web.client.RestTemplate;
 public class vehiService {
 
     @Autowired
-    private VehiRepository vehiRepository;
+    private VehiRepository vehirepository;
 
     public Vehicle registerVehicles(Vehicle vehicle) {
-        // Fetch vehicle details from external API
-        String apiUrl = "https://my.api.mockaroo.com/veiculos?key=55ad1cd0&placa=" + vehicle.getPlaca();
+
+        String apiUrls = "https://my.api.mockaroo.com/veiculos?key=55ad1cd0&placa=" + vehicle.getPlaca();
         RestTemplate restTemplate = new RestTemplate();
-        VehicleDetails vehicleDetails = restTemplate.getForObject(apiUrl, VehicleDetails.class);
+        VehicleDetails vehicleDetails = restTemplate.getForObject(apiUrls, VehicleDetails.class);
 
         if (vehicleDetails != null) {
-            // Update vehicle object with details from API
             vehicle.setMarca(vehicleDetails.getMarca());
             vehicle.setModelo(vehicleDetails.getModelo());
             vehicle.setChassi(vehicleDetails.getChassi());
             vehicle.setLicenciado(vehicleDetails.getLicenciado());
         } else {
-            throw new RuntimeException("Failed to fetch vehicle details from external API");
+            throw new RuntimeException("Failed to Fetch vehicle details from external API");
         }
-
-        // Save the vehicle to the database
-        return vehiRepository.save(vehicle);
+        return vehirepository.save(vehicle);
     }
 }
