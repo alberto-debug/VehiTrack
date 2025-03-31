@@ -16,7 +16,4 @@ public class VehicleDetails {
         return licenciado;
     }
 
-    public void setLicenciado(Boolean licenciado) {
-        this.licenciado = licenciado;
-    }
 }
