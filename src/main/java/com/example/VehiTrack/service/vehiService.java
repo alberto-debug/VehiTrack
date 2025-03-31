@@ -21,5 +21,12 @@ public class vehiService {
         VehicleDetails vehicleDetails = restTemplate.getForObject(apiUrls , VehicleDetails.class);
 
         return vehirepository.save(vehicle);
+
+        if (vehicleDetails != null){
+            vehicle.setMarca(vehicleDetails.getMarca());
+            vehicle.setModelo(vehicleDetails.getModelo());
+            vehicle.setChassi(vehicleDetails.getChassi());
+            vehicle.setLicenciado(vehicleDetails.getL);
+        }
     }
 }
