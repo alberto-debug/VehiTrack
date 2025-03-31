@@ -29,6 +29,5 @@ public class vehiService {
             throw new RuntimeException("Failed to Fetch vehicle details from external API");
         }
         return vehirepository.save(vehicle);
-
     }
 }
