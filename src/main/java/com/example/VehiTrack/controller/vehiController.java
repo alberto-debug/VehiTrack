@@ -20,6 +20,6 @@ public class vehiController {
     public ResponseEntity<Vehicle> registerVehicle(@RequestBody Vehicle vehicle){
         Vehicle registeredVehicle = vehiService.registerVehicles(vehicle);
 
-
+        return ResponseEntity.ok(registeredVehicle);
     }
 }
