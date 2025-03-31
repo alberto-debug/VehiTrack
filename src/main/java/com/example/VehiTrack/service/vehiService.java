@@ -20,13 +20,15 @@ public class vehiService {
         RestTemplate restTemplate = new RestTemplate();
         VehicleDetails vehicleDetails = restTemplate.getForObject(apiUrls , VehicleDetails.class);
 
-        return vehirepository.save(vehicle);
-
         if (vehicleDetails != null){
             vehicle.setMarca(vehicleDetails.getMarca());
             vehicle.setModelo(vehicleDetails.getModelo());
             vehicle.setChassi(vehicleDetails.getChassi());
-            vehicle.setLicenciado(vehicleDetails.getL);
+            vehicle.setLicenciado(vehicleDetails.getLicenciado());
+        }else {
+            throw new RuntimeException("Failed to Fetch vehicle details from external API");
         }
+        return vehirepository.save(vehicle);
+
     }
 }
