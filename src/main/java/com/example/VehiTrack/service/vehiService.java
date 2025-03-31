@@ -13,19 +13,19 @@ public class vehiService {
     @Autowired
     private vehiRepository vehirepository;
 
-    public Vehicle registerVehicles(Vehicle vehicle){
+    public Vehicle registerVehicles(Vehicle vehicle) {
 
-        String apiUrls = "https://my.api.mockaroo.com/veiculos?key=55ad1cd0&placa=ABC1234"+ vehicle.getPlaca();
+        String apiUrls = "https://my.api.mockaroo.com/veiculos?key=55ad1cd0&placa=" + vehicle.getPlaca();
 
         RestTemplate restTemplate = new RestTemplate();
-        VehicleDetails vehicleDetails = restTemplate.getForObject(apiUrls , VehicleDetails.class);
+        VehicleDetails vehicleDetails = restTemplate.getForObject(apiUrls, VehicleDetails.class);
 
-        if (vehicleDetails != null){
+        if (vehicleDetails != null) {
             vehicle.setMarca(vehicleDetails.getMarca());
             vehicle.setModelo(vehicleDetails.getModelo());
             vehicle.setChassi(vehicleDetails.getChassi());
             vehicle.setLicenciado(vehicleDetails.getLicenciado());
-        }else {
+        } else {
             throw new RuntimeException("Failed to Fetch vehicle details from external API");
         }
         return vehirepository.save(vehicle);
