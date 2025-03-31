@@ -19,7 +19,6 @@ public class vehiController {
     @PostMapping
     public ResponseEntity<Vehicle> registerVehicle(@RequestBody Vehicle vehicle){
         Vehicle registeredVehicle = vehiService.registerVehicles(vehicle);
-
         return ResponseEntity.ok(registeredVehicle);
     }
 }
