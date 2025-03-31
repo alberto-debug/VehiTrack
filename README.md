@@ -1,4 +1,13 @@
-# 🚗 **VehiTrack**
+```ascii
+   ____      _      _    _             
+  |  _ \ ___| |_ __| | _(_)_ __   __ _ 
+  | |_) / _ \ | '__| |/ / | '_ \ / _` |
+  |  _ <  __/ | |  |   <| | | | | (_| |
+  |_| \_\___|_|_|  |_|\_\_|_| |_|\__, |
+                                  |___/
+```
+
+#  **VehiTrack**
 
 > **Junior Back-end Challenge**
 
@@ -19,10 +28,12 @@
 
 ## 🏗 **Technologies Used**
 
-- ☕ **Java 8+**
+- ☕ **Java 17**
 - 🚀 **Spring Boot**
 - 🌐 **Spring Web**
 - 💾 **Spring Data JPA**
+- 💾 **Lombok**
+- 💾 **Spring DevTools**
 - 🛢 **Database: MySQL / PostgreSQL / H2**
 
 ---
@@ -62,7 +73,7 @@ POST /veiculos
 
 ```sh
 # Clone the repository
-git clone https://github.com/your-username/VehiTrack.git
+git clone https://github.com/alberto-debug/VehiTrack.git
 
 # Navigate to the project folder
 cd VehiTrack
@@ -78,14 +89,14 @@ mvn spring-boot:run
 
 ## 💡 **Implemented Features**
 
-✔️ CPF and License Plate validation 📜
+✔️ CPF/ID and License Plate validation 📜
 ✔️ Error handling ❌
 ✔️ Use of **Design Patterns** 🏗
 ✔️ Clean and organized code 🧼
 
 ---
 
-## ✨ **Demonstration (Animated ASCII Art)**
+
 ```ascii
    ____      _      _    _             
   |  _ \ ___| |_ __| | _(_)_ __   __ _ 
