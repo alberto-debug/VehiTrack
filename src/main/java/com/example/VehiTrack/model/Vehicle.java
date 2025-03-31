@@ -11,13 +11,13 @@ public class Vehicle {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long Id;
 
-    @Column(nullable = false,)
+    @Column(nullable = false)
     private String proprietario;
 
-    @Column(nullable = false , unique = true)
+    @Column(nullable = false, unique = true)
     private String cpf;
 
-    @Column(nullable = false , unique = true)
+    @Column(nullable = false, unique = true)
     private String placa;
 
     @Column(nullable = false)
