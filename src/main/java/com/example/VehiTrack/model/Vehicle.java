@@ -20,4 +20,13 @@ public class Vehicle {
     @Column(nullable = false , unique = true)
     private String placa;
 
+    @Column(nullable = false)
+    private String marca;
+
+    private String modelo;
+
+    private String chassi;
+
+    private boolean licenciado;
+
 }
