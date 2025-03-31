@@ -18,8 +18,9 @@ public class VehiTrackApplication {
 
 	@GetMapping("/test")
 	public String Home() {
+		System.out.println("Running at: http://localhost:8080/home/test");
 		return "Hello There";
-		System.out.Print("Running at: http://localhost:8080/home/test");
+
 	}
 
 }
