@@ -16,6 +16,10 @@ public class VehicleDetails {
         return modelo;
     }
 
+    public String getChassi() {
+        return chassi;
+    }
+
     public String getMarca() {
         return marca;
     }
