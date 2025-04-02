@@ -20,6 +20,10 @@ public class VehicleDetails {
         return chassi;
     }
 
+    public void setMarca(String marca) {
+        this.marca = marca;
+    }
+
     public String getMarca() {
         return marca;
     }
