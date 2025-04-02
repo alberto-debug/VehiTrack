@@ -12,6 +12,10 @@ public class VehicleDetails {
     private String chassi;
     private boolean licenciado;
 
+    public String getModelo() {
+        return modelo;
+    }
+
     public String getMarca() {
         return marca;
     }
