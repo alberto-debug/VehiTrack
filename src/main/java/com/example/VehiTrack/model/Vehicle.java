@@ -13,7 +13,7 @@ public class Vehicle {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long Id;
+    private Long id; // Changed from Id to id
 
     @Column(nullable = false)
     private String proprietario;
@@ -36,12 +36,13 @@ public class Vehicle {
     @Column(nullable = false)
     private boolean licenciado;
 
+    // Getters and Setters
     public Long getId() {
-        return Id;
+        return id;
     }
 
     public void setId(Long id) {
-        Id = id;
+        this.id = id;
     }
 
     public String getProprietario() {
