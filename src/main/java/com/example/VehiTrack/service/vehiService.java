@@ -1,6 +1,7 @@
 package com.example.VehiTrack.service;
 
 import com.example.VehiTrack.model.Vehicle;
+import com.example.VehiTrack.model.VehicleDetails;
 import com.example.VehiTrack.repository.VehiRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -15,7 +16,19 @@ public class vehiService {
 
     public Vehicle registerVehicle(Vehicle vehicle) {
 
-        String apiURL= "https://my.api.mockaroo.com/veiculos?key=55ad1cd0&" + Vehicle.get
+        try {
+            String apiURL = "https://my.api.mockaroo.com/veiculos?key=55ad1cd0&placa=" + vehicle.getPlaca();
+            RestTemplate restTemplate = new RestTemplate();
+            VehicleDetails vehicleDetails = restTemplate.getForObject(apiURL, VehicleDetails.class);
+
+            if (vehicleDetails != null) {
+
+            }
+
+        } catch (HttpClientErrorException e) {
+            throw new RuntimeException("Failed to fetch vehicle from external API:" + e.getMessage());
+        }
+        ;
         return null;
     }
 }

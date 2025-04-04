@@ -12,4 +12,6 @@ public class VehicleDetails {
     private String chassi;
     private String licensed;
 
+
+
 }
