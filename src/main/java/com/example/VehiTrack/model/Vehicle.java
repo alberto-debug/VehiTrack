@@ -7,6 +7,8 @@ import lombok.Getter;
 import lombok.Setter;
 
 @Entity
+@Getter
+@Setter
 @Table(name = "vehicles")
 public class Vehicle {
 
@@ -32,6 +34,8 @@ public class Vehicle {
     @NonNull
     private String chassi;
 
+    @Setter
+    @Getter
     @NonNull
     private boolean licensed;
 }
