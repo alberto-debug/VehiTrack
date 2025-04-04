@@ -9,6 +9,6 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface VehiRepository extends JpaRepository<Vehicle, Long> {
-  Optional findByEmail(String email);
+  Optional findById(String id);
 
 }
