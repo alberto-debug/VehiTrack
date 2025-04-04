@@ -7,16 +7,40 @@ import lombok.Setter;
 @Getter
 public class VehicleDetails {
 
-    private String brand;
-    private String model;
+    private String marca;
+    private String modelo;
     private String chassi;
-    private boolean licensed;
+    private boolean licenciado;
 
-    public boolean getLicensed() {
-        return licensed;
+    public String getMarca() {
+        return marca;
     }
 
-    public void setLicensed(boolean licensed) {
-        this.licensed = licensed;
+    public void setMarca(String marca) {
+        this.marca = marca;
+    }
+
+    public String getModelo() {
+        return modelo;
+    }
+
+    public void setModelo(String modelo) {
+        this.modelo = modelo;
+    }
+
+    public String getChassi() {
+        return chassi;
+    }
+
+    public void setChassi(String chassi) {
+        this.chassi = chassi;
+    }
+
+    public boolean getLicensed() {
+        return licenciado;
+    }
+
+    public void setLicenciado(boolean licenciado) {
+        this.licenciado = licenciado;
     }
 }

@@ -26,23 +26,23 @@ public class Vehicle {
     @Column(nullable = false, unique = true)
     private String placa;
 
+    @Column(nullable = false)
+    private String marca;
 
-    private String brand;
+    @Column(nullable = false)
+    private String modelo;
 
-
-    private String model;
-
-
+    @Column(nullable = false)
     private String chassi;
 
+    @Column(nullable = false)
+    private boolean licenciado;
 
-    private boolean licensed;
-
-    public boolean getLicensed() {
-        return licensed;
+    public boolean getLicenciado() {
+        return licenciado;
     }
 
-    public void setLicensed(boolean licensed) {
-        this.licensed = licensed;
+    public void setLicenciado(boolean licenciado) {
+        this.licenciado = licenciado;
     }
 }

@@ -22,10 +22,10 @@ public class vehiService {
             VehicleDetails vehicleDetails = restTemplate.getForObject(apiURL, VehicleDetails.class);
 
             if (vehicleDetails != null) {
-                vehicle.setBrand(vehicleDetails.getBrand());
-                vehicle.setModel(vehicleDetails.getModel());
+                vehicle.setMarca(vehicleDetails.getMarca());
+                vehicle.setModelo(vehicleDetails.getModelo());
                 vehicle.setChassi(vehicleDetails.getChassi());
-                vehicle.setLicensed(vehicle.getLicensed());
+                vehicle.setLicenciado(vehicle.getLicenciado());
             }else {
                 throw new RuntimeException("Failed to fetch vehicle details from external API");
             }
@@ -33,7 +33,6 @@ public class vehiService {
         } catch (HttpClientErrorException e) {
             throw new RuntimeException("Failed to fetch vehicle from external API:" + e.getMessage());
         }
-        ;
         return vehiRepository.save(vehicle);
     }
 }
