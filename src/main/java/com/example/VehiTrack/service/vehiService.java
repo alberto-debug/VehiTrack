@@ -15,6 +15,7 @@ public class vehiService {
 
     public Vehicle registerVehicle(Vehicle vehicle) {
 
+        String apiURL= "https://my.api.mockaroo.com/veiculos?key=55ad1cd0&" + Vehicle.get
         return null;
     }
 }
