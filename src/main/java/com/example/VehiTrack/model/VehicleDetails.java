@@ -10,13 +10,13 @@ public class VehicleDetails {
     private String brand;
     private String model;
     private String chassi;
-    private String licensed;
+    private boolean licensed;
 
-    public String getLicensed() {
+    public boolean getLicensed() {
         return licensed;
     }
 
-    public void setLicensed(String licensed) {
+    public void setLicensed(boolean licensed) {
         this.licensed = licensed;
     }
 }

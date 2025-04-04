@@ -37,11 +37,11 @@ public class Vehicle {
     @NonNull
     private boolean licensed;
 
-    public String getLicensed() {
+    public boolean getLicensed() {
         return licensed;
     }
 
-    public void setLicensed(String licensed) {
+    public void setLicensed(boolean licensed) {
         this.licensed = licensed;
     }
 }
