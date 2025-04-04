@@ -33,5 +33,5 @@ public class Vehicle {
     private String chassi;
 
     @NonNull
-    private String licensed;
+    private boolean licensed;
 }
