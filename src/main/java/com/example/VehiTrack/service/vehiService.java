@@ -10,4 +10,11 @@ import org.springframework.web.client.RestTemplate;
 @Service
 public class vehiService {
 
+    @Autowired
+    private VehiRepository vehiRepository;
+
+    public Vehicle registerVehicle(Vehicle vehicle) {
+
+        return null;
+    }
 }
