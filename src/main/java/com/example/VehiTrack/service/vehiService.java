@@ -26,12 +26,14 @@ public class vehiService {
                 vehicle.setModel(vehicleDetails.getModel());
                 vehicle.setChassi(vehicleDetails.getChassi());
                 vehicle.setLicensed(vehicle.getLicensed());
+            }else {
+                throw new RuntimeException("Failed to fetch vehicle details from external API");
             }
 
         } catch (HttpClientErrorException e) {
             throw new RuntimeException("Failed to fetch vehicle from external API:" + e.getMessage());
         }
         ;
-        return null;
+        return vehiRepository.save(vehicle);
     }
 }
