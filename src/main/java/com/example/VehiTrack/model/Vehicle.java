@@ -16,7 +16,8 @@ public class Vehicle {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @NonNull
+
+    @Column(nullable = false)
     private String owner;
 
     @Column(nullable = false, unique = true)
@@ -25,16 +26,16 @@ public class Vehicle {
     @Column(nullable = false, unique = true)
     private String placa;
 
-    @NonNull
+
     private String brand;
 
-    @NonNull
+
     private String model;
 
-    @NonNull
+
     private String chassi;
 
-    @NonNull
+
     private boolean licensed;
 
     public boolean getLicensed() {
