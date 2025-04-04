@@ -9,17 +9,6 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-@RestController
-@RequestMapping("/vehicles")
 public class vehiController {
-
-    @Autowired
-    private vehiService vehiService;
-
-    @PostMapping
-    public ResponseEntity<Vehicle> registerVehicle(@RequestBody Vehicle vehicle) {
-        Vehicle registeredVehicle = vehiService.registerVehicles(vehicle);
-        return ResponseEntity.ok(registeredVehicle);
-    }
 
 }
