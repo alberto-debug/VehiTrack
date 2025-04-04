@@ -5,9 +5,9 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.context.event.ApplicationReadyEvent;
 import org.springframework.context.event.EventListener;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-
 
 @SpringBootApplication
 public class VehiTrackApplication {
@@ -16,4 +16,10 @@ public class VehiTrackApplication {
 		SpringApplication.run(VehiTrackApplication.class, args);
 
 	}
+
+	@EventListener(ApplicationReadyEvent.class)
+	public void onApplicationReady() {
+		System.out.println("Application running at http://localhost:8080");
+	}
+
 }
