@@ -12,6 +12,11 @@ public class VehicleDetails {
     private String chassi;
     private String licensed;
 
+    public String getLicensed() {
+        return licensed;
+    }
 
-
+    public void setLicensed(String licensed) {
+        this.licensed = licensed;
+    }
 }

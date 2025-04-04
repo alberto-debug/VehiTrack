@@ -22,7 +22,10 @@ public class vehiService {
             VehicleDetails vehicleDetails = restTemplate.getForObject(apiURL, VehicleDetails.class);
 
             if (vehicleDetails != null) {
-
+                vehicle.setBrand(vehicleDetails.getBrand());
+                vehicle.setModel(vehicleDetails.getModel());
+                vehicle.setChassi(vehicleDetails.getChassi());
+                vehicle.setLicensed(vehicle.getLicensed());
             }
 
         } catch (HttpClientErrorException e) {
