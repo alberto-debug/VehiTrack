@@ -21,4 +21,5 @@ public class vehiController {
         Vehicle registeredVehicle = vehiService.registerVehicles(vehicle);
         return ResponseEntity.ok(registeredVehicle);
     }
+
 }
